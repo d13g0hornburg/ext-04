@@ -1,0 +1,30 @@
+.action-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .action-cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espaço entre os cards */
+  }
+  
+  .action-card {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  .action-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
