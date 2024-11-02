@@ -9,7 +9,7 @@ const AddItem = () => {
       <Header />
       <main>
         <h2>Adicionar Item</h2>
-        <form id="objeto-form" action="/add-item" method="post" enctype="multipart/form-data">
+        <form id="objeto-form" action="/addItem" method="post" enctype="multipart/form-data">
           <div className="input-container">
             <label htmlFor="descricao">Objeto encontrado</label>
             <input
