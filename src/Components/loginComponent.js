@@ -38,17 +38,16 @@ const LoginComponent = () => {
   };
 
   const mapFirebaseError = (code) => {
+    console.error(`Firebase error code: ${code}`);
     switch (code) {
       case 'auth/email-already-in-use':
         return 'E-mail já em uso!.';
       case 'auth/invalid-email':
         return 'E-mail inválido.';
-      case 'auth/weak-password':
-        return 'Senha muito fraca.';
       case 'auth/user-not-found':
         return 'Usuário não encontrado.';
-      case 'auth/wrong-password':
-        return 'Senha incorreta.';
+      case 'auth/invalid-credential':
+        return 'Credencial incorreta.';
       default:
         return 'Ocorreu um erro inesperado, tento novamente.';
     }
