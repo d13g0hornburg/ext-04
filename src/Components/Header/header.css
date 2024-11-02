@@ -1,16 +1,14 @@
-.active{
-    background-color: #1d4ed8;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #0f172a;
     color: white;
-    position: sticky;
     top: 0;
-}
+    z-index: 1000; /* Adicione esta linha */
+    margin-bottom: 50px; /* Adicione esta linha para criar espaço abaixo do header */
+  }
 
 nav .title {
     font-size: 1.5rem;

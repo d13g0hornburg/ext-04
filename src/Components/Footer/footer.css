@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  flex-wrap: wrap;
   bottom: 0;
   width: 100%;
 }

@@ -1,5 +1,38 @@
+.carousel-item {
+  position: relative;
+  background-color: rgba(206, 205, 205, 0.5); /* Fundo cinza transparente */
+}
+
 .carousel-item img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-  }
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain; /* Garante que a imagem mantenha a proporção e se ajuste ao contêiner */
+}
+
+.carousel-caption {
+  color: #ffffff; /* Altere esta linha para a cor desejada */
+  font-weight: bold; /* Adicione esta linha para deixar o texto em negrito */
+  background-color: rgba(0, 0, 0, 0.215); /* Fundo semitransparente para a legenda */
+  text-align: center;
+}
+
+.carousel-caption h3 {
+  color: #ffffff; /* Altere esta linha para a cor desejada */
+  font-weight: bold; /* Adicione esta linha para deixar o texto em negrito */
+}
+
+.carousel-caption p {
+  color: #ffffff; /* Altere esta linha para a cor desejada */
+  font-weight: bold; /* Adicione esta linha para deixar o texto em negrito */
+}
+
+/* Estilize as setas de navegação */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000000; /* Altere esta linha para a cor desejada */
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
