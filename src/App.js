@@ -4,6 +4,7 @@ import LoginComponent from './Components/loginComponent';
 import Home from './Pages/Home/home';
 import Sobre from './Pages/Sobre/sobre';
 import Apoio from './Pages/Apoio/apoio';
+import AddItem from './Pages/AddItem/addItem';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/apoio" element={<Apoio />} />
+          <Route path="/add-item" element={<AddItem />} />
         </Routes>
 
     </Router>

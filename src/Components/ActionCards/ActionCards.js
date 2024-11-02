@@ -8,7 +8,7 @@ const ActionCards = () => {
       <div className="action-cards-row">
         <div className="mb-4">
           <div className="action-card">
-            <button className="icon-button" onClick={() => window.location.href='/adicionar-item'}>
+            <button className="icon-button" onClick={() => window.location.href='/add-item'}>
               <FaPlusCircle size={50} />
             </button>
           </div>
