@@ -9,7 +9,7 @@ function App() {
     <Router>
 
         <Routes>
-          <Route path="/" element={<LoginComponent />} />
+          <Route path="/ext-04" element={<LoginComponent />} />
           <Route path="/home" element={<Home />} />
         </Routes>
 
