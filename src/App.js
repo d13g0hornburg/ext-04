@@ -9,10 +9,10 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ext-04">
 
         <Routes>
-          <Route path="/ext-04" element={<LoginComponent />} />
+          <Route path="/" element={<LoginComponent />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/apoio" element={<Apoio />} />
