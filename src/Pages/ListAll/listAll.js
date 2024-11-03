@@ -82,7 +82,7 @@ const ListAll = () => {
             </table>
           )}
         </div>
-        <button className="acao no-print" onClick={() => window.location.href='/home'}>Voltar</button>
+        <button className="acao no-print" onClick={() => navigate('/listAll')}>Voltar</button>
       </main>
       <Footer />
     </div>

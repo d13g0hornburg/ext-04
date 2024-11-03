@@ -1,0 +1,20 @@
+#mainSobre {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  #mainSobre h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #mainSobre h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  #mainSobre p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }

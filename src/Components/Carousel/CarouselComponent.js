@@ -1,46 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
-import slide1 from '../../assets/images/slide1.jpg';
-import slide2 from '../../assets/images/slide2.jpg';
-import slide3 from '../../assets/images/slide3.jpg';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebaseConnection';
 import './CarouselComponent.css';
 
 const CarouselComponent = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      const querySnapshot = await getDocs(collection(db, 'items'));
+      const itemsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setItems(itemsList);
+    };
+
+    fetchItems();
+  }, []);
+
   return (
     <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={slide1}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={slide2}
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={slide3}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+      {items.map((item) => (
+        <Carousel.Item key={item.id}>
+          <img
+            className="d-block w-100"
+            src={`http://localhost:5000${item.imagem_objeto}`}
+            alt={item.descricao}
+          />
+          <Carousel.Caption>
+            <h3>{item.descricao}</h3>
+            <p>{item.ambiente}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 };

@@ -15,11 +15,13 @@
   font-weight: bold; /* Adicione esta linha para deixar o texto em negrito */
   background-color: rgba(0, 0, 0, 0.215); /* Fundo semitransparente para a legenda */
   text-align: center;
+  font-size: 0.9rem; /* Ajuste o tamanho da fonte conforme necessário */
 }
 
 .carousel-caption h3 {
   color: #ffffff; /* Altere esta linha para a cor desejada */
   font-weight: bold; /* Adicione esta linha para deixar o texto em negrito */
+  font-size: 1 rem; /* Ajuste o tamanho da fonte conforme necessário */
 }
 
 .carousel-caption p {
