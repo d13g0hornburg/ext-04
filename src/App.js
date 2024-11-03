@@ -17,8 +17,9 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/apoio" element={<Apoio />} />
-          <Route path="/addItem" element={<AddItem />} />
-          <Route path="/ListAll" element={<ListAll />} />
+          <Route path="/addItem/" element={<AddItem />} />
+          <Route path="/addItem/:id" element={<AddItem />} />
+          <Route path="/listAll" element={<ListAll />} />
         </Routes>
 
     </Router>
