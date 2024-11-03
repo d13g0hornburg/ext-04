@@ -18,7 +18,7 @@ const ActionCards = () => {
         </div>
         <div className="mb-4">
           <div className="action-card">
-            <button className="icon-button" onClick={() => navigate('/listar-todos')}>
+            <button className="icon-button" onClick={() => navigate('/listAll')}>
               <FaListAlt size={50} />
             </button>
           </div>

@@ -81,6 +81,7 @@ const AddItem = () => {
             />
           </div>
           <button type="submit">Enviar</button>
+          <br />
           <button type="button" className="button" onClick={() => window.location.href='/home'}>Voltar</button>
         </form>
       </main>

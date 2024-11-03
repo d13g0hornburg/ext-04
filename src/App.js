@@ -5,6 +5,7 @@ import Home from './Pages/Home/home';
 import Sobre from './Pages/Sobre/sobre';
 import Apoio from './Pages/Apoio/apoio';
 import AddItem from './Pages/AddItem/addItem';
+import ListAll from './Pages/ListAll/listAll';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/apoio" element={<Apoio />} />
           <Route path="/addItem" element={<AddItem />} />
+          <Route path="/ListAll" element={<ListAll />} />
         </Routes>
 
     </Router>
