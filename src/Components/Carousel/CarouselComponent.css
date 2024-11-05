@@ -6,7 +6,7 @@
 .carousel-item img {
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 600px;
   object-fit: contain; /* Garante que a imagem mantenha a proporção e se ajuste ao contêiner */
 }
 
