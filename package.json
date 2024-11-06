@@ -10,6 +10,7 @@
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
+    "data-fns": "^1.1.0",
     "express": "^4.21.1",
     "firebase": "^11.0.1",
     "mdb-react-ui-kit": "^9.0.0",
@@ -29,7 +30,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "node server.js",
+    "start": "react-scripts start",
     "dev": "nodemon server.js"
   },
   "eslintConfig": {

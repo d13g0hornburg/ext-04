@@ -54,6 +54,10 @@ th {
   margin-top: 10px;
 }
 
+.item-details .strong {
+  text-align: center;
+}
+
 .item-image {
   max-width: 100px; /* Ajuste o tamanho máximo da imagem */
   height: auto;

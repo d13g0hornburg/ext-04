@@ -6,12 +6,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="container d-flex justify-content-between align-items-center">
         <div className="footer-icons">
-          <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="text-white">
+          <a href="https://github.com/d13g0hornburg/ext-04" target="_blank" rel="noopener noreferrer" className="text-white">
             <FaGithub size={30} />
           </a>
         </div>
         <div className="footer-text">
-          <p>&copy; 2023 Achados & Perdidos.</p>
+          <p>&copy; 2024 Achados & Perdidos.</p>
           <p>Todos os direitos reservados.</p>
           <p>Contato: contato@achadoseperdidos.com</p>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebaseConnection';
 import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
@@ -29,8 +29,9 @@ const ListAll = () => {
     setSelectedItem(item);
   };
 
-  const handleBack = () => {
-    setSelectedItem(null);
+  const handleDelete = async (itemId) => {
+    await deleteDoc(doc(db, 'items', itemId));
+    setItems(items.filter(item => item.id !== itemId));
   };
 
   return (
@@ -44,7 +45,6 @@ const ListAll = () => {
           </div>
           {selectedItem ? (
             <div className="item-details">
-              <button className="acao no-print" onClick={handleBack}>Voltar</button>
               <img src={`http://localhost:5000${selectedItem.imagem_objeto}`} alt={selectedItem.descricao} className="item-image" />
               <h3>{selectedItem.descricao}</h3>
               <p><strong>Código:</strong> {selectedItem.id}</p>
@@ -73,7 +73,7 @@ const ListAll = () => {
                     <td><img src={`http://localhost:5000${item.imagem_objeto}`} alt={item.descricao} className="item-image" /></td>
                     <td id="btnAcao" className="no-print">
                       <button className="acao no-print" onClick={(e) => { e.stopPropagation(); navigate(`/addItem/${item.id}`); }}>Editar</button>
-                      <button className="acao no-print" onClick={(e) => { e.stopPropagation(); window.location.href=`/excluir/${item.id}`; }}>Excluir</button>
+                      <button className="acao no-print" onClick={(e) => { e.stopPropagation(); handleDelete(item.id); }}>Excluir</button>
                       <button className="no-print" onClick={(e) => { e.stopPropagation(); window.open(`/imprimir/${item.id}`); }}>Imprimir Protocolo</button>
                     </td>
                   </tr>
