@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import "./header.css";
-
+import logo from '../../assets/images/logo.png';
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
       <nav>
         <Link to="/" className="title">
+          <img src={logo} className='logo'/>
           Achados & Perdidos
         </Link>
         <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>

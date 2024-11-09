@@ -3,11 +3,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #0f172a;
+    background-color: #05246b;
     color: white;
     top: 0;
-    z-index: 1000; /* Adicione esta linha */
-    margin-bottom: 50px; /* Adicione esta linha para criar espaço abaixo do header */
+    z-index: 1000; 
+    margin-bottom: 50px; 
+    padding: 20px;
   }
 
 nav .title {
@@ -36,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:not(.active):hover {
-    background-color:#172554 ;
+    background-color:#2a4fc7 ;
 }
 
 nav .menu {
@@ -88,3 +89,17 @@ nav .menu span {
         margin: 0.2rem 0.5rem;
     }
 }
+.title {
+    display: flex;
+    align-items: center; 
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none; 
+  }
+  
+  .logo {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px; 
+  }
+  
