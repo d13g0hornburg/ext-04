@@ -1,6 +1,6 @@
 .footer {
-  background-color: #05246b;
-  color: rgb(224, 184, 6);
+  background-color: #131f3b;
+  color: rgb(255, 255, 255);
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
@@ -11,7 +11,7 @@
 }
 
 .footer-icons a {
-  color: rgb(224, 184, 6);
+  color: rgb(255, 255, 255);
   margin-right: 1rem;
 }
 
