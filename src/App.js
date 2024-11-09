@@ -23,7 +23,7 @@ function App() {
           <Route path="/addItem/:id" element={<AddItem />} />
           <Route path="/listAll" element={<ListAll />} />
           <Route path="/imprimir/:id" element={<PrintProtocol />} />
-          <Route path="/erro" element={<Erro />} />
+          <Route path="*" element={<Erro />} />
         </Routes>
 
     </Router>

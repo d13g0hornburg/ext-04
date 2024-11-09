@@ -3,6 +3,7 @@ import { collection, addDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebaseConnection';
 import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
+import { Helmet } from 'react-helmet';
 import './addItem.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -82,6 +83,9 @@ const AddItem = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{id ? 'Editar Item' : 'Cadastrar item'}</title>
+      </Helmet>
       <Header />
       <main>
         <h2>{id ? 'Editar Item' : 'Adicionar Item'}</h2>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebaseConnection';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 const LoginComponent = () => {
   const [email, setEmail] = useState('');
@@ -55,6 +56,9 @@ const LoginComponent = () => {
 
   return (
     <div className="login-background">
+       <Helmet>
+      <title>A&P</title>
+    </Helmet>
       <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
         <Row>
           <Col>
