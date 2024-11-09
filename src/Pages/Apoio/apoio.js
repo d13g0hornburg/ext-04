@@ -41,7 +41,7 @@ const Apoio = () => {
         <div className="institutions">
           {institutions.map((institution, index) => (
             <div key={index} className="institution">
-              <img src={institution.logo} alt={`${institution.name} logo`} className="institution-logo" />
+              <img src={institution.logo} alt={`Logo da ${institution.name}`} className="institution-logo" />
               <h2>{institution.name}</h2>
               <p>{institution.description}</p>
               <p><b>Contato:</b> {institution.contact}</p>
