@@ -1,6 +1,6 @@
 // PrintProtocol.js
 import React from 'react';
-import { format } from 'date-fns';
+//import { format } from 'date-fns';
 import './printProtocol.css';
 
 const PrintProtocol = ({ objeto }) => {
@@ -25,7 +25,7 @@ const PrintProtocol = ({ objeto }) => {
           </div>
           <div className="print-item">
             <div className="print-label">Data:</div>
-            <div className="print-value">{format(new Date(objeto.data), 'yyyy-MM-dd')}</div>
+            {/* <div className="print-value">{format(new Date(objeto.data), 'yyyy-MM-dd')}</div> */}
           </div>
         </div>
         <div className="print-details2">
