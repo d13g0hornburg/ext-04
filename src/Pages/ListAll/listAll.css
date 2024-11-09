@@ -30,7 +30,7 @@ h1 {
 
 .table-container {
   margin-top: 20px;
-  overflow-x: auto; /* Adiciona rolagem horizontal para tabelas largas */
+  overflow-x: auto; 
 }
 
 table {
@@ -59,20 +59,20 @@ th {
 }
 
 .item-image {
-  max-width: 100px; /* Ajuste o tamanho máximo da imagem */
+  max-width: 100px;
   height: auto;
 }
 
 #btnAcao {
   display: flex;
-  flex-direction: column; /* Coloca os botões um sobre o outro */
-  gap: 5px; /* Espaço entre os botões */
+  flex-direction: column; 
+  gap: 5px; 
 }
 
 #btnAcao button {
   margin: 0;
-  padding: 5px 10px; /* Reduz o tamanho dos botões */
-  font-size: 12px; /* Reduz o tamanho da fonte dos botões */
+  padding: 5px 10px; 
+  font-size: 12px; 
 }
 
 .item-details {
