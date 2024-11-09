@@ -37,5 +37,5 @@ app.post('/upload', upload.single('imagem_objeto'), async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

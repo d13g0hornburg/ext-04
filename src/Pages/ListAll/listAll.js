@@ -5,7 +5,7 @@ import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
 import './listAll.css';
 import { useNavigate } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet';
 const ListAll = () => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -36,6 +36,9 @@ const ListAll = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{'Listar'}</title>
+      </Helmet>
       <Header />
       <main id="mainListar">
         <div className="table-container">

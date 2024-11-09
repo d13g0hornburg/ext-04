@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import "./header.css";
 
@@ -28,5 +28,6 @@ const Header = () => {
         </ul>
       </nav>
     );
-  };
+};
+
 export default Header;
