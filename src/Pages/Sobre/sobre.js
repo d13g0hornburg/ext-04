@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
 import './sobre.css';
-
+import { Helmet } from 'react-helmet';
 const Sobre = () => {
   const [showLegislation, setShowLegislation] = useState(false);
 
@@ -11,7 +11,11 @@ const Sobre = () => {
   };
 
   return (
+   
     <div>
+       <Helmet>
+      <title>Sobre</title>
+    </Helmet>
       <Header />
       <main id="mainSobre">
         <h1>Achados e Perdidos</h1>
