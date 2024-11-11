@@ -13,9 +13,26 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'src/uploads')));
 
 const storage = multer.memoryStorage(); // Armazena a imagem na memória temporariamente
-
+const TELEGRAM_BOT_LINK = 'https://web.telegram.org/a/#8001707439';
 const upload = multer({ storage });
+app.post('/chatbot', (req, res) => {
+  console.log('Mensagem recebida:', req.body.message);
+  const { message } = req.body;
 
+  let botResponse = '';
+
+  if (message.toLowerCase().includes('olá')) {
+    botResponse = 'Olá! Como posso ajudar você hoje?';
+  } else if (message.toLowerCase().includes('Achar um item específico')) {
+    botResponse = `Para isso entre em contato com a gente no TELEGRAM: https://web.telegram.org/a/#8001707439`;
+  } else {
+    botResponse = 'Desculpe, não entendi. Poderia reformular?';
+  }
+
+  // Verifique se o tipo de conteúdo está correto
+  res.setHeader('Content-Type', 'application/json');
+  res.json({ message: botResponse });
+} );
 app.post('/upload', upload.single('imagem_objeto'), async (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.');

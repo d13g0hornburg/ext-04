@@ -3,6 +3,7 @@ import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
 import CarouselComponent from '../../Components/Carousel/CarouselComponent';
 import ActionCards from '../../Components/ActionCards/ActionCards';
+import ChatBot from '../../Components/Chatbot/Chatbot';
 
 const Home = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
       <CarouselComponent />
       <ActionCards />
       <Footer />
+      <ChatBot />
     </div>
   );
 };

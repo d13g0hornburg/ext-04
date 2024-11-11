@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Button, Modal, Form, InputGroup } from "react-bootstrap";
+import { Button, Modal, Form, InputGroup, Card } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Chatbot.css';  // Importando o arquivo de estilo
 
 function ChatBot() {
   const [show, setShow] = useState(false);
@@ -19,45 +20,56 @@ function ChatBot() {
 
     // Envia a mensagem para o backend (API)
     const response = await fetch('http://localhost:5000/chatbot', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ message: input }),
-    });
-
-    const data = await response.json();
-    
-    // Adiciona a resposta do bot (com link clicável)
-    setMessage((prev) => [...prev, { message: data.message, user: 'bot' }]);
-    setInput("");
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: input }),
+      });
+      
+      const text = await response.text(); // Obtém a resposta como texto
+      console.log("Resposta do servidor:", text); // Mostra o texto retornado
+      
+      // Tente fazer o parse se o conteúdo for um JSON
+      try {
+        const data = JSON.parse(text);
+        setMessage((prev) => [...prev, { message: data.message, user: 'bot' }]);
+      } catch (error) {
+        console.error("Erro ao fazer o parse do JSON:", error);
+      }
+      
   };
 
   return (
     <>
-      <Button variant="primary" onClick={toggleChat}>BotChat</Button>
+      <Button variant="success" onClick={toggleChat} className="chat-button">
+        <i className="fas fa-robot"></i> BotChat
+      </Button>
       
-      <Modal show={show} onHide={toggleChat}>
-        <Modal.Header closeButton>
+      <Modal show={show} onHide={toggleChat} className="chat-modal">
+        <Modal.Header closeButton className="chat-header">
           <Modal.Title>ChatBot</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="chat-body">
           {message.map((msg, index) => (
-            <div key={index}>
-
-              <p dangerouslySetInnerHTML={{ __html: msg.message }} />
+            <div key={index} className={`message ${msg.user}`}>
+              <Card body>
+                <p dangerouslySetInnerHTML={{ __html: msg.message }} />
+              </Card>
             </div>
           ))}
         </Modal.Body>
-        <Modal.Footer>
-          <Form.Group>
+        <Modal.Footer className="chat-footer">
+          <Form.Group className="w-100">
             <InputGroup>
-              <input
+              <Form.Control
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                className="chat-input"
+                placeholder="Digite uma mensagem..."
               />
-              <Button onClick={handleMessage}>Enviar</Button>
+              <Button onClick={handleMessage} variant="primary" className="send-button">Enviar</Button>
             </InputGroup>
           </Form.Group>
         </Modal.Footer>
