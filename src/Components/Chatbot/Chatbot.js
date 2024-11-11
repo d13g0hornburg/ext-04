@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, InputGroup, Card } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Chatbot.css';  // Importando o arquivo de estilo
+import './Chatbot.css';  
 
 function ChatBot() {
   const [show, setShow] = useState(false);
@@ -26,18 +26,9 @@ function ChatBot() {
         },
         body: JSON.stringify({ message: input }),
       });
-      
-      const text = await response.text(); // Obtém a resposta como texto
-      console.log("Resposta do servidor:", text); // Mostra o texto retornado
-      
-      // Tente fazer o parse se o conteúdo for um JSON
-      try {
-        const data = JSON.parse(text);
-        setMessage((prev) => [...prev, { message: data.message, user: 'bot' }]);
-      } catch (error) {
-        console.error("Erro ao fazer o parse do JSON:", error);
-      }
-      
+    const data = await response.json();
+    setMessage([...message, { message: data.message, user: 'bot' }]);
+    setInput("");
   };
 
   return (
