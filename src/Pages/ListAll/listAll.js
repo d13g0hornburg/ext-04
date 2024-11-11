@@ -15,7 +15,10 @@ const ListAll = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const querySnapshot = await getDocs(collection(db, 'items'));
-      const itemsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      const itemsList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data()
+      }));
       setItems(itemsList);
     };
 
@@ -51,7 +54,7 @@ const ListAll = () => {
             <div className="item-details">
               <img src={`http://localhost:5000${selectedItem.imagem_objeto}`} alt={selectedItem.descricao} className="item-image" />
               <h3>{selectedItem.descricao}</h3>
-              <p><strong>Código:</strong> {selectedItem.id}</p>
+              <p><strong>Código:</strong> {selectedItem.numericId.toString().padStart(5, '0')}</p>
               <p><strong>Ambiente:</strong> {selectedItem.ambiente}</p>
               <p><strong>Professor:</strong> {selectedItem.professor}</p>
               <p><strong>Curso:</strong> {selectedItem.curso}</p>
@@ -72,13 +75,12 @@ const ListAll = () => {
               <tbody>
                 {items.map((item) => (
                   <tr key={item.id} onClick={() => handleItemClick(item)}>
-                    <td>{item.id}</td>
+                    <td>{item.numericId.toString().padStart(5, '0')}</td>
                     <td>{item.descricao}</td>
                     <td><img src={`http://localhost:5000${item.imagem_objeto}`} alt={item.descricao} className="item-image" /></td>
                     <td id="btnAcao" className="no-print">
                       <button className="acao no-print" onClick={(e) => { e.stopPropagation(); navigate(`/addItem/${item.id}`); }}>Editar</button>
                       <button className="acao no-print" onClick={(e) => { e.stopPropagation(); handleDelete(item.id); }}>Excluir</button>
-                      <button className="no-print" onClick={(e) => { e.stopPropagation(); window.open(`/imprimir/${item.id}`); }}>Imprimir Protocolo</button>
                     </td>
                   </tr>
                 ))}
@@ -86,7 +88,7 @@ const ListAll = () => {
             </table>
           )}
         </div>
-        <button className="acao no-print" onClick={() => navigate('/listAll')}>Voltar</button>
+        <button className="acao no-print" onClick={() => navigate('/home')}>Voltar</button>
       </main>
       <Footer />
     </div>

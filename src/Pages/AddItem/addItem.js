@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { collection, addDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, getDoc, updateDoc, query, orderBy, limit, getDocs } from 'firebase/firestore';
 import { db } from '../../firebaseConnection';
 import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
@@ -70,7 +70,20 @@ const AddItem = () => {
         console.log('Document updated with ID: ', id);
         alert('Item atualizado com sucesso!');
       } else {
-        const docRef = await addDoc(collection(db, 'items'), itemData);
+        // Get the highest numericId
+        const q = query(collection(db, 'items'), orderBy('numericId', 'desc'), limit(1));
+        const querySnapshot = await getDocs(q);
+        let newNumericId = 1;
+        if (!querySnapshot.empty) {
+          const highestNumericIdItem = querySnapshot.docs[0].data();
+          newNumericId = highestNumericIdItem.numericId + 1;
+        }
+
+        // Add the new item with the new numericId
+        const docRef = await addDoc(collection(db, 'items'), {
+          ...itemData,
+          numericId: newNumericId
+        });
         console.log('Document written with ID: ', docRef.id);
         alert('Item adicionado com sucesso!');
       }
