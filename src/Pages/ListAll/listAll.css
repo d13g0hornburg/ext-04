@@ -48,6 +48,22 @@ th {
   background-color: #f2f2f2;
 }
 
+.item-details .details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item-details .details-container div {
+  flex: 0 0 48%; /* Cada coluna ocupa 48% da largura */
+  margin-bottom: 10px;
+}
+
+.item-details .details-container div p {
+  margin: 0;
+}
+
 .item-image-preview {
   max-width: 200px;
   height: auto;
@@ -76,11 +92,14 @@ th {
 }
 
 .item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: left;
 }
 
 .item-details img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   margin-bottom: 20px;
 }

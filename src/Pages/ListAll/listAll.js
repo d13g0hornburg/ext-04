@@ -53,14 +53,19 @@ const ListAll = () => {
           {selectedItem ? (
             <div className="item-details">
               <img src={`http://localhost:5000${selectedItem.imagem_objeto}`} alt={selectedItem.descricao} className="item-image" />
-              <h3>{selectedItem.descricao}</h3>
-              <p><strong>Código:</strong> {selectedItem.numericId.toString().padStart(5, '0')}</p>
-              <p><strong>Ambiente:</strong> {selectedItem.ambiente}</p>
-              <p><strong>Professor:</strong> {selectedItem.professor}</p>
-              <p><strong>Curso:</strong> {selectedItem.curso}</p>
-              <p><strong>Data:</strong> {new Date(selectedItem.data).toLocaleDateString()}</p>
-              <p><strong>Hora:</strong> {selectedItem.hora.slice(0, 5)}</p>
-              <p><strong>Encontrado por:</strong> {selectedItem.encontrado}</p>
+              <div className="details-container">
+                <div>
+                  <p><strong>Código:</strong> {selectedItem.numericId.toString().padStart(5, '0')}</p>
+                  <p><strong>Ambiente:</strong> {selectedItem.ambiente}</p>
+                  <p><strong>Professor:</strong> {selectedItem.professor}</p>
+                </div>
+                <div>
+                  <p><strong>Curso:</strong> {selectedItem.curso}</p>
+                  <p><strong>Data:</strong> {new Date(selectedItem.data).toLocaleDateString()}</p>
+                  <p><strong>Hora:</strong> {selectedItem.hora.slice(0, 5)}</p>
+                  <p><strong>Encontrado por:</strong> {selectedItem.encontrado}</p>
+                </div>
+              </div>
             </div>
           ) : (
             <table>
