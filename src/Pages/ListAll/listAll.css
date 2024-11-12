@@ -104,6 +104,37 @@ th {
   margin-bottom: 20px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha os botões à esquerda */
+  gap: 10px;
+  margin-top: 10px;
+}
+.button-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Define a largura do botão */
+  height: 60px; /* Define a altura do botão */
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #131f3b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-container button .no-print {
+  background-color: #131f3b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
 @media print {
   .no-print {
     display: none;

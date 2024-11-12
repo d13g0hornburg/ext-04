@@ -1,83 +1,72 @@
-/* printProtocol.css */
+.print-protocol {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-.print-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #000;
-    background-color: #fff;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.no-print {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: 20px;
+  border-radius: 4px;
+  background-color: #131f3b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.no-print:hover {
+  background-color: #0056b3;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Adiciona rolagem horizontal para tabelas largas */
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.item-details img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.details-container div {
+  flex: 0 0 48%; /* Cada coluna ocupa 48% da largura */
+  margin-bottom: 10px;
+}
+
+.details-container div p {
+  margin: 0;
+}
+
+@media print {
+  .no-print {
+    display: none;
   }
-  
-  .print-header {
-    text-align: center;
-    margin-bottom: 20px;
+  header, footer {
+    display: none;
   }
-  
-  .print-header h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .print-main {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .print-details, .print-details2 {
-    width: 48%;
-  }
-  
-  .print-item {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .print-label {
-    font-weight: bold;
-    width: 30%;
-  }
-  
-  .print-value {
-    width: 70%;
-  }
-  
-  .print-image {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .print-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .print-signature {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .signature-field {
-    width: 48%;
-  }
-  
-  .signature-label {
-    margin-bottom: 10px;
-  }
-  
-  .signature-line {
-    border-bottom: 1px solid #000;
-    height: 20px;
-  }
-  
-  .print-actions {
-    text-align: center;
-  }
-  
-  .print-actions button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+}

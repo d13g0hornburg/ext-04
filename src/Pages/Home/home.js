@@ -4,6 +4,7 @@ import Footer from '../../Components/Footer/footer';
 import CarouselComponent from '../../Components/Carousel/CarouselComponent';
 import ActionCards from '../../Components/ActionCards/ActionCards';
 
+
 const Home = () => {
   useEffect(() => {
     document.title = 'Achados e perdidos';

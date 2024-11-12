@@ -3,12 +3,15 @@ import Helmet from 'react-helmet';
 import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
 import './apoio.css';
+import { FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import logo1 from '../../assets/images/logo1.jpg';
 import logo2 from '../../assets/images/logo2.jpg';
 import logo3 from '../../assets/images/logo3.jpg';
 
 
 const Apoio = () => {
+  const navigate = useNavigate();
   const institutions = [
     {
       name: 'Instituição 1',
@@ -38,6 +41,11 @@ const Apoio = () => {
       <Header />
       <main id="mainApoio">
         <h1>Instituições que Apoiamos</h1>
+        <div className="button-container">
+          <button onClick={() => navigate('/home')} title="Voltar">
+            <FaArrowLeft />
+          </button>
+        </div>
         <div className="institutions">
           {institutions.map((institution, index) => (
             <div key={index} className="institution">

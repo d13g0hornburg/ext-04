@@ -6,10 +6,12 @@ import Footer from '../../Components/Footer/footer';
 import './listAll.css';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { FaPrint, FaArrowLeft } from 'react-icons/fa'; // Importar ícones
 
 const ListAll = () => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [title, setTitle] = useState('Relatório de itens');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,6 +33,7 @@ const ListAll = () => {
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    setTitle('Imprimir Protocolo');
   };
 
   const handleDelete = async (itemId) => {
@@ -47,8 +50,15 @@ const ListAll = () => {
       <main id="mainListar">
         <div className="table-container">
           <div id="tituloRelatorio">
-            <h1 id="relatorio">Relatório de itens</h1>
-            <button className="no-print" onClick={handlePrint}>Imprimir</button>
+            <h1 id="relatorio">{title}</h1>
+            <div className="button-container">
+              <button className="no-print" onClick={handlePrint} title="Imprimir">
+                <FaPrint />
+              </button>
+              <button className="no-print" onClick={() => navigate('/home')} title="Voltar">
+                <FaArrowLeft />
+              </button>
+            </div>
           </div>
           {selectedItem ? (
             <div className="item-details">
@@ -93,7 +103,6 @@ const ListAll = () => {
             </table>
           )}
         </div>
-        <button className="acao no-print" onClick={() => navigate('/home')}>Voltar</button>
       </main>
       <Footer />
     </div>

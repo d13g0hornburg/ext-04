@@ -3,9 +3,12 @@ import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
 import './sobre.css';
 import { Helmet } from 'react-helmet';
+import { FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Sobre = () => {
   const [showLegislation, setShowLegislation] = useState(false);
+  const navigate = useNavigate();
 
   const toggleLegislation = () => {
     setShowLegislation(!showLegislation);
@@ -18,7 +21,13 @@ const Sobre = () => {
     </Helmet>
       <Header />
       <main id="mainSobre">
+      <div className="button-container">
+      <button onClick={() => navigate('/home')} title="Voltar">
+        <FaArrowLeft />
+        </button>
+      </div>
         <h1>Achados e Perdidos</h1>
+
         <p>Gestão eficiente de objetos perdidos em instituições de ensino.</p>
         <h2>Autores</h2>
         <p>Davi Emanuel Araujo Padilha, Diego Ricardo Hornburg, Enthoni Nagel, Mateus Padilha Lourenço.</p>
