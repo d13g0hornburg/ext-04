@@ -32,7 +32,7 @@ const LoginComponent = () => {
     setSuccess('');
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      setSuccess('Registration successful! You can now log in.');
+      setSuccess('Registrado! Agora é possível logar ao sistema.');
     } catch (error) {
       setError(mapFirebaseError(error.code));
     }

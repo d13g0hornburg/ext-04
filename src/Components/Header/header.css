@@ -1,3 +1,17 @@
+.header {
+    background-color: #0f172a;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+
 nav {
     display: flex;
     justify-content: space-between;

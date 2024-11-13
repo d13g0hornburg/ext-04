@@ -1,3 +1,19 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 60px; /* Adicione padding-bottom para acomodar a altura do rodapé */
+}
+
 .footer {
   background-color: #0f172a;
   color: white;
@@ -6,8 +22,10 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .footer-icons a {

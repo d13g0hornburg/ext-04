@@ -30,12 +30,12 @@ const Sobre = () => {
 
         <p>Gestão eficiente de objetos perdidos em instituições de ensino.</p>
         <h2>Autores</h2>
-        <p>Davi Emanuel Araujo Padilha, Diego Ricardo Hornburg, Enthoni Nagel, Mateus Padilha Lourenço.</p>
+        <p>Diego Ricardo Hornburg, Enthoni Nagel, Mateus Padilha Lourenço.</p>
         <h2>Instituição</h2>
         <p>Faculdade de tecnologia Senac de Jaraguá do Sul (SENAC)</p>
         <p>89254-430 – Jaraguá do Sul – SC – Brasil</p>
         <h2>Contato</h2>
-        <p>davi.padilha@alunos.sc.senac.br, diego.hornburg@alunos.sc.senac.br, enthoni.nagel@alunos.sc.senac.br, mateus.lourenco@alunos.sc.senac.br</p>
+        <p>diego.hornburg@alunos.sc.senac.br, enthoni.nagel@alunos.sc.senac.br, mateus.lourenco@alunos.sc.senac.br</p>
         <h2 onClick={toggleLegislation} className="expandable">Legislação para itens perdidos em instituições de ensino</h2>
         {showLegislation && (
           <div className="legislation-content">
