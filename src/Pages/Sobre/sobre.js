@@ -27,7 +27,6 @@ const Sobre = () => {
         </button>
       </div>
         <h1>Achados e Perdidos</h1>
-
         <p>Gestão eficiente de objetos perdidos em instituições de ensino.</p>
         <h2>Autores</h2>
         <p>Diego Ricardo Hornburg, Enthoni Nagel, Mateus Padilha Lourenço.</p>
