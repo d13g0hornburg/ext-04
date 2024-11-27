@@ -62,7 +62,6 @@ const ListAll = () => {
           </div>
           {selectedItem ? (
             <div className="item-details">
-              <img src={`http://localhost:5000${selectedItem.imagem_objeto}`} alt={selectedItem.descricao} className="item-image" />
               <div className="details-container">
                 <div>
                   <p><strong>Código:</strong> {selectedItem.numericId.toString().padStart(5, '0')}</p>
@@ -75,6 +74,15 @@ const ListAll = () => {
                   <p><strong>Hora:</strong> {selectedItem.hora.slice(0, 5)}</p>
                   <p><strong>Encontrado por:</strong> {selectedItem.encontrado}</p>
                 </div>
+              </div>
+              <img src={`http://localhost:5000${selectedItem.imagem_objeto}`} alt={selectedItem.descricao} className="item-image" />
+              <div className="signature-container">
+                <p>Entregue ao proprietário (nome legível + assinatura):</p><br/>
+                <div className="signature-line"></div>
+              </div>
+              <div className="date-container">
+                <p>Data da entrega ao proprietário:</p><br/>
+                <div className="signature-line"></div>
               </div>
             </div>
           ) : (
