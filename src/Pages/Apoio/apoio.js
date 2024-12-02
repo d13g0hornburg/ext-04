@@ -8,7 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import logo1 from '../../assets/images/logo1.jpg';
 import logo2 from '../../assets/images/logo2.jpg';
 import logo3 from '../../assets/images/logo3.jpg';
-
+import qrcode1 from '../../assets/images/qrcode1.PNG';
+import qrcode2 from '../../assets/images/qrcode2.PNG';
+import qrcode3 from '../../assets/images/qrcode3.PNG';
 
 const Apoio = () => {
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ const Apoio = () => {
     {
       name: 'Instituição 1',
       logo: logo1,
+      qrcode: qrcode1,
       description: 'Descrição da Instituição 1.',
       contact: 'contato@instituicao1.com',
     },
@@ -23,11 +26,13 @@ const Apoio = () => {
       name: 'Instituição 2',
       logo: logo2,
       description: 'Descrição da Instituição 2.',
+      qrcode: qrcode2,
       contact: 'contato@instituicao2.com',
     },
     {
       name: 'Instituição 3',
       logo: logo3,
+      qrcode: qrcode3,
       description: 'Descrição da Instituição 3.',
       contact: 'contato@instituicao3.com',
     },
@@ -53,6 +58,7 @@ const Apoio = () => {
               <h2>{institution.name}</h2>
               <p>{institution.description}</p>
               <p><b>Contato:</b> {institution.contact}</p>
+              <img src={institution.qrcode} alt={`Logo da ${institution.name}`} className="qrcode-code" />
             </div>
           ))}
         </div>
