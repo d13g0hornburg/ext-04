@@ -42,8 +42,10 @@ Certifique-se de ter instalado:
    git clone <url-do-repositorio>
    ```
 
-2. 
+2. Acesse o diretório do projeto: 
+```
 cd <nome-do-diretorio>
+```
 
 3. Instale as dependências:
 ```
