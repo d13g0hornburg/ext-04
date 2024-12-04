@@ -2,13 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebaseConnection';
-import Header from '../../Components/Header/header';
-import Footer from '../../Components/Footer/footer';
+import Header from '../Header/header';
+import Footer from '../Footer/footer';
 import './printProtocol.css';
+import { useNavigate } from 'react-router-dom';
+import { FaPrint, FaArrowLeft } from 'react-icons/fa'; // Importar ícones
 
 const PrintProtocol = () => {
   const { itemId } = useParams();
   const [item, setItem] = useState(null);
+  const navigate = useNavigate();
+
+  const handlePrint = () => {
+    window.print();
+  };
 
   useEffect(() => {
     const fetchItem = async () => {
@@ -34,8 +41,15 @@ const PrintProtocol = () => {
       <main id="mainListar">
         <div className="table-container">
           <div id="tituloRelatorio">
-            <h1 id="relatorio">Imprimir Protocolo</h1>
-            <button className="no-print" onClick={() => window.print()}>Imprimir</button>
+            <h1 id="relatorio">Item</h1>
+              <div className="button-container">
+                <button className="no-print" onClick={handlePrint} title="Imprimir">
+                  <FaPrint />
+                </button>
+                <button className="no-print" onClick={() => navigate('/home')} title="Voltar">
+                  <FaArrowLeft />
+                </button>
+              </div>
           </div>
           <div className="item-details">
             <img src={`http://localhost:5000${item.imagem_objeto}`} alt={item.descricao} className="item-image" />

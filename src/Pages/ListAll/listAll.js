@@ -65,6 +65,7 @@ const ListAll = () => {
               <div className="details-container">
                 <div>
                   <p><strong>Código:</strong> {selectedItem.numericId.toString().padStart(5, '0')}</p>
+                  <p><strong>Descrição</strong> {selectedItem.descricao}</p>
                   <p><strong>Ambiente:</strong> {selectedItem.ambiente}</p>
                   <p><strong>Professor:</strong> {selectedItem.professor}</p>
                 </div>

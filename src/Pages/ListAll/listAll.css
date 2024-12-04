@@ -51,13 +51,15 @@ th {
 .item-details .details-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+  
 }
 
 .item-details .details-container div {
   flex: 0 0 48%; /* Cada coluna ocupa 48% da largura */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .item-details .details-container div p {
@@ -107,7 +109,9 @@ th {
 #btnAcao {
   display: flex;
   flex-direction: column; /* Coloca os botões um sobre o outro */
-  gap: 5px; /* Espaço entre os botões */
+  gap: 10px; /* Espaço entre os botões */
+  margin-top: 35px;
+  align-items: center;;
 }
 
 #btnAcao button {
@@ -120,7 +124,7 @@ th {
   display: flex;
   justify-content: flex-end; /* Alinha os botões à esquerda */
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .button-container button {
   display: flex;
@@ -154,4 +158,8 @@ th {
   header, footer {
     display: none;
   }
+  #no-printAcao {
+    display: none;
+  }
+
 }

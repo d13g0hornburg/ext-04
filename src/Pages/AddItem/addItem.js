@@ -114,6 +114,7 @@ const AddItem = () => {
                 placeholder="Descrição"
                 value={formData.descricao}
                 onChange={handleChange}
+                maxLength="40" // Limita a 40 caracteres
               />
             </div>
             <div className="input-container">

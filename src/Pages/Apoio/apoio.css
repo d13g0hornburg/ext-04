@@ -5,7 +5,7 @@
   
   #mainApoio h1 {
     text-align: center;
-    margin-bottom: 120px;
+    margin-bottom: 0px;
   }
   
   .institutions {
@@ -43,7 +43,7 @@
 
   .button-container {
     display: flex;
-    justify-content: flex-end; /* Alinha os botões à esquerda */
+    justify-content: flex-end;
     gap: 10px;
     margin-top: 10px;
     margin-right: 10px;

@@ -1,3 +1,18 @@
+.footer {
+  background-color: #0f172a;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px; /* Adicione esta linha para criar espaço abaixo do header */
+}
+
+
 body, html {
   height: 100%;
   margin: 0;
@@ -14,20 +29,6 @@ main {
   padding-bottom: 60px; /* Adicione padding-bottom para acomodar a altura do rodapé */
 }
 
-.footer {
-  background-color: #0f172a;
-  color: white;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 50px; /* Adicione esta linha para criar espaço abaixo do header */
-}
-
 .footer-icons a {
   color: white;
   margin-right: 1rem;
@@ -36,3 +37,4 @@ main {
 .footer-text p {
   margin: 0;
 }
+
