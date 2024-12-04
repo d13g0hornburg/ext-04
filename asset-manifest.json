@@ -1,29 +1,20 @@
 {
   "files": {
-    "main.css": "/ext-04/static/css/main.2b85049a.chunk.css",
-    "main.js": "/ext-04/static/js/main.e3fa42ad.chunk.js",
-    "main.js.map": "/ext-04/static/js/main.e3fa42ad.chunk.js.map",
-    "runtime-main.js": "/ext-04/static/js/runtime-main.4b03e847.js",
-    "runtime-main.js.map": "/ext-04/static/js/runtime-main.4b03e847.js.map",
-    "static/css/2.b71989ea.chunk.css": "/ext-04/static/css/2.b71989ea.chunk.css",
-    "static/js/2.3f10f0fb.chunk.js": "/ext-04/static/js/2.3f10f0fb.chunk.js",
-    "static/js/2.3f10f0fb.chunk.js.map": "/ext-04/static/js/2.3f10f0fb.chunk.js.map",
+    "main.css": "/ext-04/static/css/main.f5017f3f.css",
+    "main.js": "/ext-04/static/js/main.edaacc27.js",
+    "static/media/logo2.jpg": "/ext-04/static/media/logo2.2df43852678437024a68.jpg",
+    "static/media/logo1.jpg": "/ext-04/static/media/logo1.33d3bffaf529a0abe509.jpg",
+    "static/media/logo3.jpg": "/ext-04/static/media/logo3.8028317e7096424a7284.jpg",
+    "static/media/logo.png": "/ext-04/static/media/logo.1eda589e8749249dfe2a.png",
+    "static/media/qrcode1.PNG": "/ext-04/static/media/qrcode1.169124ee4c793284841b.PNG",
+    "static/media/qrcode2.PNG": "/ext-04/static/media/qrcode2.169124ee4c793284841b.PNG",
+    "static/media/qrcode3.PNG": "/ext-04/static/media/qrcode3.169124ee4c793284841b.PNG",
     "index.html": "/ext-04/index.html",
-    "precache-manifest.410cf890859ee513ce3692d7ffcc6ca4.js": "/ext-04/precache-manifest.410cf890859ee513ce3692d7ffcc6ca4.js",
-    "service-worker.js": "/ext-04/service-worker.js",
-    "static/css/2.b71989ea.chunk.css.map": "/ext-04/static/css/2.b71989ea.chunk.css.map",
-    "static/css/main.2b85049a.chunk.css.map": "/ext-04/static/css/main.2b85049a.chunk.css.map",
-    "static/js/2.3f10f0fb.chunk.js.LICENSE.txt": "/ext-04/static/js/2.3f10f0fb.chunk.js.LICENSE.txt",
-    "static/media/logo.png": "/ext-04/static/media/logo.12dd2e9c.png",
-    "static/media/logo1.jpg": "/ext-04/static/media/logo1.826d8750.jpg",
-    "static/media/logo2.jpg": "/ext-04/static/media/logo2.d84adbb2.jpg",
-    "static/media/logo3.jpg": "/ext-04/static/media/logo3.924685c5.jpg"
+    "main.f5017f3f.css.map": "/ext-04/static/css/main.f5017f3f.css.map",
+    "main.edaacc27.js.map": "/ext-04/static/js/main.edaacc27.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.4b03e847.js",
-    "static/css/2.b71989ea.chunk.css",
-    "static/js/2.3f10f0fb.chunk.js",
-    "static/css/main.2b85049a.chunk.css",
-    "static/js/main.e3fa42ad.chunk.js"
+    "static/css/main.f5017f3f.css",
+    "static/js/main.edaacc27.js"
   ]
 }
